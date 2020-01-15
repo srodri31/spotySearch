@@ -1,4 +1,4 @@
-<div *ngIf="artist">
+<section *ngIf="artist">
     <h1>{{ artist.name }}</h1>
     <img 
         [src]="artist.images[0].url" 
@@ -10,4 +10,13 @@
             {{ genre }}
         </li>
     </ul>
-</div>
+</section>
+<section *ngIf="albums?.length">
+    <h2>Albums</h2>
+    <ul>
+        <li *ngFor="let album of albums">
+            <img [src]="album.images[0].url">
+            {{ album.name }}
+        </li>
+    </ul>
+</section>

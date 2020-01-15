@@ -8,5 +8,6 @@ export class Artist {
         this.genres = data.genres;
         this.id = data.id;
         this.name = data.name;
+        this.images = data.images;
     }
 }
