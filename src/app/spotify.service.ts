@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 export class SpotifyService {
   httpOptions = {
     headers: new HttpHeaders({
-      'Authorization': 'Bearer BQDhjEE5187cB7f2A3sbDTKUBfoAiHBw6Zso3_IA2yawB6p8D3GWwj2VeCobY-WsDe6BELgWkwucHSXpiRM'
+      'Authorization': 'Bearer BQCJ_xiIDMrPEu7ZUufSIFKGp8tjNS7ibt9uKuwLfECkPFDPk5s_Twxc8G2YNLlNrkm9lwsQaKbdSK33sxU'
     })
   };
 
