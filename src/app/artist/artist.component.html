@@ -15,8 +15,7 @@
     <h2>Albums</h2>
     <ul>
         <li *ngFor="let album of albums">
-            <img [src]="album.images[0].url">
-            {{ album.name }}
+            <app-album [album]="album"></app-album>
         </li>
     </ul>
 </section>
