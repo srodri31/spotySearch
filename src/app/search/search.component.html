@@ -1,0 +1,7 @@
+<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+<ul class="search-result">
+    <li *ngFor="let artist of artists$ | async" >
+        {{artist.name}}
+    </li>
+</ul>   
