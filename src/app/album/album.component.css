@@ -1,0 +1,9 @@
+.album-image {
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.album-name {
+    color: rgb(32, 238, 176);
+}

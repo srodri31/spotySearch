@@ -1,6 +1,6 @@
 <article>
-    <img [src]="album.images[0].url">
-    <span>{{ album.name }}</span>
-    <span *ngFor="let artist of album.artists">{{ artist.name }}</span>
+    <img class="album-image" [src]="album.images[0].url">
+    <span class="album-name">{{ album.name }}</span><br>
+    <span *ngFor="let artist of album.artists">{{ artist.name }}</span><br>
     <span>{{ album.release_date }}</span>
 </article>
