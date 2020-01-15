@@ -2,6 +2,8 @@
 
 <ul class="search-result">
     <li *ngFor="let artist of artists$ | async" >
-        {{artist.name}}
+        <a routerLink="/artist/{{artist.id}}">
+            {{artist.name}}
+        </a>
     </li>
 </ul>   

@@ -10,7 +10,7 @@ import { Observable, of } from 'rxjs';
 export class SpotifyService {
   httpOptions = {
     headers: new HttpHeaders({
-      'Authorization': 'Bearer BQCJ_xiIDMrPEu7ZUufSIFKGp8tjNS7ibt9uKuwLfECkPFDPk5s_Twxc8G2YNLlNrkm9lwsQaKbdSK33sxU'
+      'Authorization': 'Bearer BQDOWe3mACwtMUzvIjpzgGYkK2Oi20Bq0Yb6CwRjONTfdjxUAu0BD0vUlkOqfOnbOtaS4v38LfMk5KiO2eY'
     })
   };
 
@@ -26,5 +26,9 @@ export class SpotifyService {
       .pipe<Artist[]>(
         map( (result: { artists: { items: null }}) => result.artists.items)
       );
+  }
+
+  getArtitst(id: string = null): Observable<Artist> {
+    return this.http.get<Artist>("https://api.spotify.com/v1/artists/" + id, this.httpOptions);
   }
 }
