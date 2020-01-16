@@ -11,7 +11,7 @@ import { Observable, of } from 'rxjs';
 export class SpotifyService {
   httpOptions = {
     headers: new HttpHeaders({
-      'Authorization': 'Bearer BQD3TmUQwYaZtPD3y3WA6fD2A5rBj5aEjpCjksa9X5Bf5BO9JIWTEVZEP7ntpXRliRllvJPCOJBpatI_5t0'
+      'Authorization': 'Bearer BQBbEaThTKHBk8lCHd_Xyhqj9EDv_-eltaa6Lb0lEwVnOC_Bn8NDKXHkjvxn3ZfUPs-3MWX-b_0Zmz_BN98'
     })
   };
 
@@ -31,6 +31,10 @@ export class SpotifyService {
 
   getArtitst(id: string = null): Observable<Artist> {
     return this.http.get<Artist>("https://api.spotify.com/v1/artists/" + id, this.httpOptions);
+  }
+
+  getAlbum(id: string): Observable<Album> {
+    return this.http.get<Album>("https://api.spotify.com/v1/albums/" + id, this.httpOptions);
   }
 
   getArtistAlbums(id: string = null): Observable<Album[]> {

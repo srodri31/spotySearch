@@ -1,0 +1,23 @@
+<section *ngIf="album">
+    <h1>{{ album.name }}</h1>
+    <img [src]="album.images[0]?.url">
+    <ul>
+        <li *ngFor="let genre of album.genres">
+            {{ genre }}
+        </li>
+    </ul>
+</section>
+<section *ngIf="album?.tracks.items.length">
+    <h2>Songs</h2>
+    <ul>
+        <li *ngFor="let track of album.tracks.items">
+            {{ track.name }}
+            <audio controls *ngIf="track.preview_url; else noPreviewUrl">
+                <source [src]="track.preview_url">
+            </audio>
+            <ng-template #noPreviewUrl>
+                <p>There is not preview url for this song</p>
+            </ng-template>
+        </li>
+    </ul>
+</section>
