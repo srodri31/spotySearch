@@ -9,6 +9,8 @@ import { ArtistComponent } from './artist/artist.component';
 import { AlbumComponent } from './album/album.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
+import { TrackDetailsComponent } from './track-details/track-details.component';
+import { SpotifyService } from './spotify.service';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,17 @@ import { AlbumDetailsComponent } from './album-details/album-details.component';
     ArtistComponent,
     AlbumComponent,
     NavbarComponent,
-    AlbumDetailsComponent
+    AlbumDetailsComponent,
+    TrackDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,6 +4,7 @@ import { Artist } from './models/artist';
 import { Album } from './models/album';
 import { map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { Track } from './models/track';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import { Observable, of } from 'rxjs';
 export class SpotifyService {
   httpOptions = {
     headers: new HttpHeaders({
-      'Authorization': 'Bearer BQBbEaThTKHBk8lCHd_Xyhqj9EDv_-eltaa6Lb0lEwVnOC_Bn8NDKXHkjvxn3ZfUPs-3MWX-b_0Zmz_BN98'
+      'Authorization': 'Bearer BQDEP02WnzY-PqPluaaf-oW_Fy8eUstDvlzUNgoirCL3Oq2dcMx7jTA1wAGEPq7VBSz0N1jU83rwZnzTmzo'
     })
   };
 
@@ -42,5 +43,9 @@ export class SpotifyService {
       .pipe<Album[]>(
         map((result:  { items: null }) => result.items)
       );
+  }
+
+  getTrack(id: number): Observable<Track> {
+    return this.http.get<Track>("https://api.spotify.com/v1/tracks/" + id, this.httpOptions);
   }
 }
