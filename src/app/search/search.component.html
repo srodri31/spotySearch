@@ -1,4 +1,4 @@
-<input #searchBox id="search-box" (input)="search(searchBox.value)" />
+<input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Artist name..."/>
 
 <ul class="search-result">
     <li *ngFor="let artist of artists$ | async" >

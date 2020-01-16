@@ -9,3 +9,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: rgb(32, 238, 176);
 }
+
+a {
+    text-decoration: none;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}

@@ -1,7 +1,17 @@
 <nav *ngIf="router.url == '/search'; then dashboardNav else standardNav"></nav>
 <ng-template #dashboardNav>
+    <a routerLink="/" [class.disabled]="router.url == '/search'">
+        <h1>
+            INICIO
+        </h1>
+    </a>
     <h1>SpotySearch</h1>
 </ng-template>
 <ng-template #standardNav>
+    <a routerLink="/">
+        <h1>
+            INICIO
+        </h1>
+    </a>
     <app-search></app-search>
 </ng-template>
