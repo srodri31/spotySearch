@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { TrackDetailsComponent } from './track-details/track-details.component';
 import { SpotifyService } from './spotify.service';
+import { FavoriteSongsService } from './favorite-songs.service';
+import { FavoriteSongsComponent } from './favorite-songs/favorite-songs.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { SpotifyService } from './spotify.service';
     AlbumComponent,
     NavbarComponent,
     AlbumDetailsComponent,
-    TrackDetailsComponent
+    TrackDetailsComponent,
+    FavoriteSongsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { SpotifyService } from './spotify.service';
     AppRoutingModule,
   ],
   providers: [
-    SpotifyService
+    SpotifyService,
+    FavoriteSongsService
   ],
   bootstrap: [AppComponent]
 })

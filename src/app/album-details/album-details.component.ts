@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../spotify.service';
 import { ActivatedRoute } from '@angular/router';
 import { Album } from '../models/album';
+import { FavoriteSongsService } from '../favorite-songs.service';
+import { Track } from '../models/track';
 
 @Component({
   selector: 'app-album-details',
@@ -13,7 +15,8 @@ export class AlbumDetailsComponent implements OnInit {
 
   constructor(
     private spotify: SpotifyService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private favoriteSongs: FavoriteSongsService
   ) { }
 
   ngOnInit() {
@@ -22,6 +25,10 @@ export class AlbumDetailsComponent implements OnInit {
         this.album = album;
       })
     })
+  }
+
+  addFavoriteSong(song: Track): void {
+    this.favoriteSongs.addSong(song);
   }
 
 }
