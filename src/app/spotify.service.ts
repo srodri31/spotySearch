@@ -12,7 +12,7 @@ import { Track } from './models/track';
 export class SpotifyService {
   httpOptions = {
     headers: new HttpHeaders({
-      'Authorization': 'Bearer BQDpfnwWoIOsqgRW4UGOA72YLI8KTZXT7qUgxP9EGZOgconmW6keNBtrkmeuaUBT4OTpd_PC5MlaAwJ70ks'
+      'Authorization': 'Bearer BQAKEfIWHhIK9aWaUQPsnvN6K155oWesz708tnoujh_-2yzeX2G7PMhGHPQSe-HoNe0FAV-BqNQfVaA63qM'
     })
   };
 

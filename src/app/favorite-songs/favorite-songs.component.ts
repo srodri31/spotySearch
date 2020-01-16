@@ -8,14 +8,12 @@ import { Track } from '../models/track';
   styleUrls: ['./favorite-songs.component.css']
 })
 export class FavoriteSongsComponent implements OnInit {
-  favoriteSongs: Track[];
 
   constructor(
     private favoriteSongsService: FavoriteSongsService
   ) { }
 
   ngOnInit() {
-    this.favoriteSongs = this.favoriteSongsService.getSongs();
   }
 
 }

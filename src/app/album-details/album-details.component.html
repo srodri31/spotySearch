@@ -20,7 +20,14 @@
             <ng-template #noPreviewUrl>
                 <p>There is not preview url for this song</p>
             </ng-template>
-            <button (click)="addFavoriteSong(track)">Favoritos</button>
+            <button 
+                *ngIf="!isFavoriteSong(track); else removeSong"
+                (click)="addFavoriteSong(track)">
+                Agregar a Favoritos
+            </button>
+            <ng-template #removeSong>
+                <button (click)="removeFavoriteSong(track.id)">Quitar de Favoritos</button>
+            </ng-template>
         </li>
     </ul>
 </section>

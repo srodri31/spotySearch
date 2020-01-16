@@ -31,4 +31,11 @@ export class AlbumDetailsComponent implements OnInit {
     this.favoriteSongs.addSong(song);
   }
 
+  removeFavoriteSong(id: string): void {
+    this.favoriteSongs.removeSong(id);
+  }
+
+  isFavoriteSong(song: Track): boolean {
+    return this.favoriteSongs.isFavoriteSong(song);
+  }
 }

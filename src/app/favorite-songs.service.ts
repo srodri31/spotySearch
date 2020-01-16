@@ -7,7 +7,9 @@ import { Track } from './models/track';
 export class FavoriteSongsService {
   favoriteSongs: Track[] = [];
 
-  constructor() { }
+  constructor() { 
+    this.getSongs();
+  }
 
   addSong(song: Track): void {
     this.favoriteSongs.push(song);
@@ -18,5 +20,19 @@ export class FavoriteSongsService {
     let songsString: string = localStorage.getItem("favoriteSongs") || "[]";
     this.favoriteSongs = JSON.parse(songsString);
     return this.favoriteSongs;
+  }
+
+  removeSong(id: string) {
+    this.favoriteSongs = this.favoriteSongs.filter( song => song.id !== id );
+    localStorage.setItem("favoriteSongs", JSON.stringify(this.favoriteSongs));
+  }
+
+  isFavoriteSong({id}): boolean {
+    let song: Track = null;
+    
+    song = this.favoriteSongs.find( (track: Track) =>{
+      return track.id === id
+    });
+    return !!song;
   }
 }
