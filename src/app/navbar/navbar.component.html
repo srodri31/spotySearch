@@ -1,6 +1,6 @@
-<nav *ngIf="router.url == '/search'; then dashboardNav else standardNav"></nav>
+<nav *ngIf="router.url == '/dashboard'; then dashboardNav else standardNav"></nav>
 <ng-template #dashboardNav>
-    <a routerLink="/" [class.disabled]="router.url == '/search'">
+    <a class="disabled">
         <h1>
             INICIO
         </h1>
