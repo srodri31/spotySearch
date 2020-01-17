@@ -1,0 +1,9 @@
+<article *ngIf="song">
+    <a routerLink="/track/{{song.id}}">
+        <h4>{{ song.name }}</h4>
+    </a>
+    <a routerLink="/artist/{{song.artists[0]?.id}}">
+        <p>{{ song.artists[0]?.name }}</p>
+    </a>
+    <button (click)="removeSong(song.id)">Remove</button>
+</article>

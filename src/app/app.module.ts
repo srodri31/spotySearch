@@ -14,6 +14,7 @@ import { SpotifyService } from './spotify.service';
 import { FavoriteSongsService } from './favorite-songs.service';
 import { FavoriteSongsComponent } from './favorite-songs/favorite-songs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FavoriteSongTileComponent } from './favorite-song-tile/favorite-song-tile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AlbumDetailsComponent,
     TrackDetailsComponent,
     FavoriteSongsComponent,
-    DashboardComponent
+    DashboardComponent,
+    FavoriteSongTileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 <ul>
     <li *ngFor="let song of favoriteSongsService.favoriteSongs">
-        {{ song.name }}
+        <app-favorite-song-tile [song]="song"></app-favorite-song-tile>
     </li>
 </ul>
