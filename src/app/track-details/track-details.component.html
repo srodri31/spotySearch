@@ -1,8 +1,12 @@
 <section *ngIf="song">
     <h1>{{ song.name }}</h1>
     <img [src]="song.album?.images[0]?.url">
-    <p>{{ song.artists[0]?.name }}</p>
-    <p>{{ song.album?.name }}</p>
+    <a routerLink="/artist/{{song.artists[0]?.id}}">
+        <p>{{ song.artists[0]?.name }}</p>
+    </a>
+    <a routerLink="/album/{{song.album?.id}}">
+        <p>{{ song.album?.name }}</p>
+    </a>
     <audio controls *ngIf="song.preview_url; else noPreviewUrl">
         <source [src]="song.preview_url">
     </audio>
