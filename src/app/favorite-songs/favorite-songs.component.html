@@ -1,5 +1,8 @@
-<ul>
-    <li *ngFor="let song of favoriteSongsService.favoriteSongs">
-        <app-favorite-song-tile [song]="song"></app-favorite-song-tile>
-    </li>
-</ul>
+<section>
+    <h2>Favorite Songs</h2>
+    <ul>
+        <li *ngFor="let song of favoriteSongsService.favoriteSongs">
+            <app-favorite-song-tile [song]="song"></app-favorite-song-tile>
+        </li>
+    </ul>
+</section>

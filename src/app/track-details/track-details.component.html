@@ -1,9 +1,11 @@
 <section *ngIf="song">
     <h1>{{ song.name }}</h1>
     <img [src]="song.album?.images[0]?.url">
+    <h4>Artist:</h4>
     <a routerLink="/artist/{{song.artists[0]?.id}}">
         <p>{{ song.artists[0]?.name }}</p>
     </a>
+    <h4>Album:</h4> 
     <a routerLink="/album/{{song.album?.id}}">
         <p>{{ song.album?.name }}</p>
     </a>
